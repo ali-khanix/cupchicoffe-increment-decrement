@@ -5,7 +5,7 @@ import { createContext, ReactNode, useContext, useState } from "react";
 export type Product = {
   id: number;
   name: string;
-  type: "hot" | "cold";
+  type: string;
   price: number;
 };
 
