@@ -1,15 +1,15 @@
-import { Product } from "@/context/CartContext";
+import { MenuItem } from "@/types/product-types";
 
-type Props = {
-  product: Product;
+interface ProductCartProps {
+  product: MenuItem;
   onAdd: () => void;
-};
+}
 
-const ProductCart = ({ product, onAdd }: Props) => (
+const ProductCart = ({ product, onAdd }: ProductCartProps) => (
   <div className="border p-4 rounded shadow-sm">
     <h2 className="text-lg font-bold">{product.name}</h2>
-    <p>Type: {product.type}</p>
-    <p>Price: {product.price.toFixed(2)}</p>
+    <p>توضیحات: {product.description}</p>
+    <p>قیمت: {product.price.toLocaleString()}</p>
 
     <button
       onClick={onAdd}

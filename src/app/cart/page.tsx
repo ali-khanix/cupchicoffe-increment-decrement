@@ -1,6 +1,7 @@
 "use client";
 
 import TopNavbar from "@/components/TopNavbar";
+import BottomNavbar from "@/components/BottomNavbar";
 import { useCart } from "@/context/CartContext";
 
 export default function CartPage() {
@@ -27,6 +28,8 @@ export default function CartPage() {
           </>
         )}
       </div>
+
+      <BottomNavbar />
     </div>
   );
 }

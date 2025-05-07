@@ -1,17 +1,11 @@
 "use client";
 
+import { MenuItem } from "@/types/product-types";
 import { createContext, ReactNode, useContext, useState } from "react";
 
-export type Product = {
-  id: number;
-  name: string;
-  type: string;
-  price: number;
-};
-
 type CartContextType = {
-  cart: Product[];
-  addToCart: (product: Product) => void;
+  cart: MenuItem[];
+  addToCart: (product: MenuItem) => void;
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -24,9 +18,9 @@ export const useCart = (): CartContextType => {
 };
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<MenuItem[]>([]);
 
-  const addToCart = (product: Product) => {
+  const addToCart = (product: MenuItem) => {
     setCart((prev) => [...prev, product]);
   };
 
