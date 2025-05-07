@@ -1,42 +1,47 @@
-import { Product } from "@/types/Product";
+import type { ProductCategory } from "@/types/product-types";
 
-const products: Product[] = [
+export const drinks:ProductCategory[] = [
     {
-        id: 1, name: "Espresso", type: "hot", price: 3.5,
-    },
-    {
-        id: 2, name: "Latte", type: "hot", price: 3.5,
-    },
-    {
-        id: 3, name: "Iced Coffee", type: "cold", price: 3.5,
-    },
-    {
-        id: 4, name: "Cold Brew", type: "cold", price: 3.5,
-    },
-    {
-        id: 5, name: "Espresso", type: "hot", price: 3.5,
-    },
-    {
-        id: 6, name: "Latte", type: "hot", price: 3.5,
-    },
-    {
-        id: 7, name: "Iced Coffee", type: "cold", price: 3.5,
-    },
-    {
-        id: 8, name: "Cold Brew", type: "cold", price: 3.5,
-    },
-    {
-        id: 9, name: "Espresso", type: "hot", price: 3.5,
-    },
-    {
-        id: 10, name: "Latte", type: "hot", price: 3.5,
-    },
-    {
-        id: 11, name: "Iced Coffee", type: "cold", price: 3.5,
-    },
-    {
-        id: 12, name: "Cold Brew", type: "cold", price: 3.5,
-    },
-]
-
-export default products;
+        category: "نوشیدنی های سرد",
+        items: [
+          {
+            id: 1,
+            name: "شکلات سرد",
+            description: "لورم ایپسوم یک متن آماده است",
+            price: 45000,
+            image:
+              "https://kitchenofyouth.com/wp-content/uploads/2018/04/mushroom-cold-chocolate-vertical-angle-w-spoon-7945.jpg",
+          },
+          
+        ],
+      },
+      {
+        category: "نوشیدنی های گرم",
+        items: [
+          {
+            id: 2,
+            name: "هات چاکلت کازانووا",
+            description: "شکلات تلخ، شیر، پودر کاکائو، نشاسته ذرت، شکر، وانیل ",
+            price: 95000,
+            image:
+              "https://anitalianinmykitchen.com/wp-content/uploads/2016/11/hot-chocolate-600-.jpg",
+          },
+          {
+            id: 3,
+            name: "هات چاکلت کازانووا",
+            description: "شکلات تلخ، شیر، پودر کاکائو، نشاسته ذرت، شکر، وانیل ",
+            price: 95000,
+            image:
+              "https://anitalianinmykitchen.com/wp-content/uploads/2016/11/hot-chocolate-600-.jpg",
+          },
+          {
+            id: 4,
+            name: "هات چاکلت کازانووا",
+            description: "شکلات تلخ، شیر، پودر کاکائو، نشاسته ذرت، شکر، وانیل ",
+            price: 95000,
+            image:
+              "https://anitalianinmykitchen.com/wp-content/uploads/2016/11/hot-chocolate-600-.jpg",
+          },
+        ]
+      }
+  ];

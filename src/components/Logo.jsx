@@ -10,6 +10,7 @@ const Logo = () => {
         height={180}
         src={"/logo-h-(green).svg"}
         className="mx-auto py-4"
+        style={{ width: "auto", height: "auto" }}
       />
     </Link>
   );
