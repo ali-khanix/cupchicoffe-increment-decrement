@@ -19,7 +19,7 @@ export default function CartPage() {
           <p>سبد شما خالی است</p>
         ) : (
           <div className="">
-            <ul className="space-y-2">
+            <ul className="space-y-2 flex flex-col gap-3">
               {cart.map((item, idx) => (
                 <li
                   key={idx}
