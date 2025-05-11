@@ -17,7 +17,7 @@ const BottomNavbar = () => {
   console.log(path)
   console.log(cart)
   return (
-    <nav className="bg-neutral-200 h-[55px] nav fixed bottom-0 left-0 w-full z-50 text-black py-8">
+    <nav className="bg-neutral-100 h-[55px] nav fixed bottom-0 left-0 w-full z-50 text-black py-8">
       <div className="flex items-center justify-center gap-20 h-full w-full">
         <Link className="relative" href={'cart'}>
           <ShoppingCart

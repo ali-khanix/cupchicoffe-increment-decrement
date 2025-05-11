@@ -143,3 +143,11 @@ export const drinks: ProductCategory[] = [
     ],
   },
 ]
+
+// const scrollToSection = (category: string) => {
+//   const section = document.getElementById(category);
+//   if(section) {
+//     section.scrollIntoView({behavior: "smooth"});
+//   }
+
+// }
