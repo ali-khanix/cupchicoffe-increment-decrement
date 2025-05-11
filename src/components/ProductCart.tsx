@@ -1,6 +1,7 @@
 import { MenuItem } from '@/types/product-types'
 import Image from 'next/image'
 import { Button } from './ui/button'
+import { Plus } from 'lucide-react'
 
 interface ProductCartProps {
   product: MenuItem
@@ -29,20 +30,16 @@ const ProductCart = ({ product, onAdd }: ProductCartProps) => {
             {product.description}
           </p>
         </div>
-        <div>
-          <p className="text-gray-800 font-semibold mt-2">
+        <div className="flex items-center justify-between mt-2">
+          <p className="text-gray-800 font-semibold">
             {product.price.toLocaleString()}{' '}
             <span className="text-[12px]">تومان</span>
           </p>
-        </div>
 
-        <Button
-          variant={'default'}
-          onClick={onAdd}
-          className="mt-2 w-full px-6 py-2 rounded opa"
-        >
-          اضافه به کارت
-        </Button>
+          <Button variant={'default'} onClick={onAdd} className="rounded ">
+            <Plus size={24} />
+          </Button>
+        </div>
       </div>
     </div>
   )
