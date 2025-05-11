@@ -10,7 +10,7 @@ interface ProductCartProps {
 
 const ProductCart = ({ product, onAdd }: ProductCartProps) => {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden p-2 ">
+    <div className="bg-white rounded-2xl overflow-hidden p-2 border-primary border-[2px]">
       {/* Image */}
       <div className="relative overflow-hidden rounded-2xl w-full h-32">
         <Image

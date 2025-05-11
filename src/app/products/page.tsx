@@ -11,7 +11,7 @@ export default function ProductsPage() {
   return (
     <div className="mt-[140px] px-4 mb-20">
       {drinks.map((category, categoryIndex) => (
-        <div key={categoryIndex}>
+        <div key={categoryIndex} id={category.category}>
           <h2 className="text-2xl font-semibold my-4 mt-12">
             {category.category}
           </h2>
