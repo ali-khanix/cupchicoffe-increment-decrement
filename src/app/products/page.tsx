@@ -1,32 +1,48 @@
 'use client'
 
-import { MenuItem } from '@/types/product-types'
-import { drinks } from '@/data/products'
+// Hooks
 import { useCart } from '@/context/CartContext'
-import ProductCart from '@/components/ProductCart'
+import { useEffect, useState } from 'react'
+
+// Data
+import { drinks } from '@/data/products'
+
+// Components
+import PageTransitionWrapper from '@/components/animations/PageTransitionWrapper'
+
+// Data types
+
+import ProductList from './components/ProductList'
 
 export default function ProductsPage() {
   const { addToCart } = useCart()
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<typeof drinks>([])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setData(drinks)
+      setLoading(false)
+    }, 1000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <span className="text-lg font-medium animate-pulse">
+          درحال بارگذاری اطلاعات...
+        </span>
+      </div>
+    )
+  }
 
   return (
-    <div className="mt-[140px] px-4 mb-20">
-      {drinks.map((category, categoryIndex) => (
-        <div key={categoryIndex} id={category.category}>
-          <h2 className="text-2xl font-semibold my-4 mt-12">
-            {category.category}
-          </h2>
-
-          <div className="grid grid-cols-2 gap-4">
-            {category.items.map((item: MenuItem, itemIndex) => (
-              <ProductCart
-                key={itemIndex}
-                product={item}
-                onAdd={() => addToCart(item)}
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
+    <PageTransitionWrapper>
+      <main className="mt-[140px] px-4 mb-20">
+        <ProductList categories={data} onAdd={addToCart} />
+      </main>
+    </PageTransitionWrapper>
   )
 }
