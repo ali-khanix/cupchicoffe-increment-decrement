@@ -1,5 +1,5 @@
-import BottomNavbar from "../../components/BottomNavbar";
-import TopNavbar from "./../../components/TopNavbar";
+import BottomNavbar from '../../components/BottomNavbar'
+import TopNavbar from './../../components/TopNavbar'
 
 export default function ProductsLayout({ children }) {
   return (
@@ -8,5 +8,5 @@ export default function ProductsLayout({ children }) {
       {children}
       <BottomNavbar />
     </main>
-  );
+  )
 }
