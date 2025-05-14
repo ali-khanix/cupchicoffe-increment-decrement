@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { Plus, X } from 'lucide-react'
+import { X } from 'lucide-react'
 
 import {
   Dialog,
@@ -18,6 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import { DialogClose } from '@radix-ui/react-dialog'
 export default function CartPage() {
   const { cart, removeFromCart } = useCart()
   const total = cart.reduce((sum, item) => sum + item.price, 0)
@@ -78,6 +79,9 @@ export default function CartPage() {
                     {/* Dialog Content */}
                     <DialogContent>
                       <DialogHeader className="text-right">
+                        <DialogClose>
+                          <X />
+                        </DialogClose>
                         <div className="image">
                           <Image
                             className="object-cover w-full h-60 rounded-lg"
