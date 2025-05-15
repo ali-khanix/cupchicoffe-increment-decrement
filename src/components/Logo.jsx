@@ -1,19 +1,20 @@
-import Image from "next/image";
-import Link from "next/link";
+import { useTheme } from 'next-themes'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const Logo = () => {
+  const { theme, setTheme } = useTheme()
   return (
-    <Link href={"/"}>
+    <Link href={'/'}>
       <Image
         alt="لوگو کافه کاپ چی"
         width={180}
         height={180}
-        src={"/logo-h-(green).svg"}
+        src={`${theme === 'dark' ? '/logo-h-(cream).svg' : '/logo-h-(green).svg'}`}
         className="mx-auto py-4"
-        style={{ width: "auto", height: "auto" }}
       />
     </Link>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

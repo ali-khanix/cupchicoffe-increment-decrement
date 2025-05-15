@@ -10,12 +10,12 @@ import { useCart } from '@/context/CartContext'
 import { ShoppingCart } from 'lucide-react'
 import { Menu } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { ThemeToggle } from './ThemeToggle'
 
 const BottomNavbar = () => {
   const { cart } = useCart()
   const path = usePathname()
-  console.log(path)
-  console.log(cart)
+
   return (
     <nav className="bg-neutral-100 h-[55px] nav fixed bottom-0 left-0 w-full z-50 text-black py-8">
       <div className="flex items-center justify-center gap-20 h-full w-full">
@@ -35,6 +35,9 @@ const BottomNavbar = () => {
         >
           <Menu size={28} />
         </Link>
+
+        {/* Dark mode toggle */}
+        <ThemeToggle />
       </div>
     </nav>
   )

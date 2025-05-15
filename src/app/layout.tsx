@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { CartProvider } from '@/context/CartContext'
+import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${iranSans.variable} antialiased`}>
-        <CartProvider>
-          <main>{children}</main>
-        </CartProvider>
+        <ThemeProvider attribute={'class'} enableSystem defaultTheme="system">
+          <CartProvider>
+            <main>{children}</main>
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   )
