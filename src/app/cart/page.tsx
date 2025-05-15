@@ -28,27 +28,27 @@ export default function CartPage() {
       <TopNavbar />
 
       <div className="mt-[180px]">
-        <h1 className="text-2xl font-semibold mb-4">سبد خرید شما</h1>
+        <h1 className="text-2xl font-semibold mb-4">لیست سفارش ها</h1>
 
         {cart.length === 0 ? (
-          <p>سبد شما خالی است</p>
+          <p>لیست سفارش های شما خالی است</p>
         ) : (
           <div>
             <ul className="space-y-4 flex flex-col">
               {cart.map((item, idx) => (
                 <>
                   <Dialog>
-                    <div className="bg-white border-2 border-black rounded-2xl overflow-hidden relative p-2">
+                    <div className="bg-zinc-100 dark:bg-zinc-900 dark:bg-zinc-800 border-2 border-primary dark:border-secondary rounded-2xl overflow-hidden relative p-2">
                       <div className="flex items-center gap-8 flex-col ">
                         {/* ✅ Dialog Trigger: Only wrap image + text */}
                         <DialogTrigger asChild key={idx}>
                           <div className="flex items-center w-full cursor-pointer gap-2">
                             {/* Text Content */}
                             <div className="w-1/2 pr-2 flex flex-col justify-between space-y-2 mb-8">
-                              <h2 className="text-lg font-medium">
+                              <h2 className="text-lg font-medium text-zinc-200">
                                 {item.name} - {item.price.toLocaleString()}
                               </h2>
-                              <p className="text-sm text-gray-700 truncate">
+                              <p className="text-sm text-zinc-400 truncate">
                                 {item.description}
                               </p>
                             </div>
@@ -77,7 +77,7 @@ export default function CartPage() {
                     </div>
 
                     {/* Dialog Content */}
-                    <DialogContent>
+                    <DialogContent className="dark:border-secondary">
                       <DialogHeader className="text-right">
                         <DialogClose>
                           <X />

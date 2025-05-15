@@ -24,7 +24,7 @@ interface ProductCartProps {
 const ProductCart = ({ product, onAdd }: ProductCartProps) => {
   return (
     <Dialog>
-      <div className="bg-white rounded-2xl overflow-hidden p-2 border-primary border-[2px]">
+      <div className="bg-zinc-200 dark:bg-zinc-900 rounded-2xl overflow-hidden p-2 border-primary dark:border-secondary border-[2px]">
         {/* Dialog Trigger wraps only clickable preview area */}
         <DialogTrigger asChild>
           <div className="cursor-pointer">
@@ -41,8 +41,10 @@ const ProductCart = ({ product, onAdd }: ProductCartProps) => {
 
             {/* Content */}
             <div className="p-2 rounded text-right">
-              <h2 className="text-lg font-semibold">{product.name}</h2>
-              <p className="whitespace-nowrap overflow-hidden text-ellipsis text-[12px] text-gray-700">
+              <h2 className="text-lg font-semibold dark:text-gray-200 truncate">
+                {product.name}
+              </h2>
+              <p className="whitespace-nowrap overflow-hidden text-ellipsis text-[12px] text-gray-700 dark:text-gray-400">
                 {product.description}
               </p>
             </div>
@@ -50,19 +52,23 @@ const ProductCart = ({ product, onAdd }: ProductCartProps) => {
         </DialogTrigger>
 
         {/* Price + Add to Cart button (outside trigger) */}
-        <div className="flex items-center justify-between mt-2 px-2">
-          <p className="text-gray-800 font-semibold">
+        <div className="flex items-center justify-between mt-2 px-2 ">
+          <p className="text-gray-800 font-semibold dark:text-zinc-200">
             {product.price.toLocaleString()}{' '}
             <span className="text-[12px]">تومان</span>
           </p>
 
-          <Button variant="default" onClick={onAdd} className="rounded">
+          <Button
+            variant="default"
+            onClick={onAdd}
+            className="rounded dark:bg-secondary dark:text-zinc-900"
+          >
             <Plus size={24} />
           </Button>
         </div>
       </div>
 
-      <DialogContent className="text-right">
+      <DialogContent className="text-right dark:border-secondary">
         <DialogHeader>
           <DialogClose>
             <X />

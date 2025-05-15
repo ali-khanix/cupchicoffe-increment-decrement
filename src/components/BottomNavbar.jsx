@@ -7,8 +7,7 @@ import Link from 'next/link'
 import { useCart } from '@/context/CartContext'
 
 // Icons
-import { ShoppingCart } from 'lucide-react'
-import { Menu } from 'lucide-react'
+import { Home, NotebookPen, ShoppingCart } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -20,7 +19,7 @@ const BottomNavbar = () => {
     <nav className="bg-neutral-100 h-[55px] nav fixed bottom-0 left-0 w-full z-50 text-black py-8">
       <div className="flex items-center justify-center gap-20 h-full w-full">
         <Link className="relative" href={'cart'}>
-          <ShoppingCart
+          <NotebookPen
             className={path === '/cart' ? 'text-gray-800' : 'text-gray-400'}
             size={28}
           />
@@ -33,7 +32,7 @@ const BottomNavbar = () => {
           className={path === '/products' ? 'text-gray-800' : 'text-gray-400'}
           href={'/products'}
         >
-          <Menu size={28} />
+          <Home size={28} />
         </Link>
 
         {/* Dark mode toggle */}
