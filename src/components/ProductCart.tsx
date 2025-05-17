@@ -24,7 +24,7 @@ interface ProductCartProps {
 const ProductCart = ({ product, onAdd }: ProductCartProps) => {
   return (
     <Dialog>
-      <div className="bg-zinc-200 dark:bg-zinc-900 rounded-2xl overflow-hidden p-2 border-primary dark:border-secondary border-[2px]">
+      <div className="bg-zinc-200 dark:bg-zinc-900 rounded-2xl overflow-hidden p-2 border-primary dark:border-secondary border-[1px]">
         {/* Dialog Trigger wraps only clickable preview area */}
         <DialogTrigger asChild>
           <div className="cursor-pointer">
@@ -68,7 +68,7 @@ const ProductCart = ({ product, onAdd }: ProductCartProps) => {
         </div>
       </div>
 
-      <DialogContent className="text-right dark:border-secondary">
+      <DialogContent className="text-right border-primary dark:border-secondary">
         <DialogHeader>
           <DialogClose>
             <X />
@@ -84,14 +84,18 @@ const ProductCart = ({ product, onAdd }: ProductCartProps) => {
           <div className="flex flex-col space-y-2 items-start mt-4">
             <DialogTitle className="text-right">{product.name}</DialogTitle>
             <DialogDescription>{product.description}</DialogDescription>
-            <p className="text-gray-800 font-semibold">
+            <p className="text-zinc-800 dark:text-zinc-200 font-semibold">
               <span className="text-xl">{product.price.toLocaleString()} </span>
               <span className="text-[12px]">تومان</span>
             </p>
           </div>
         </DialogHeader>
         <DialogFooter>
-          <Button variant={'default'} onClick={onAdd} className="py-6 rounded">
+          <Button
+            variant={'default'}
+            onClick={onAdd}
+            className="py-6 rounded dark:bg-secondary dark:text-zinc-900"
+          >
             اضافه به سبد خرید
           </Button>
         </DialogFooter>
