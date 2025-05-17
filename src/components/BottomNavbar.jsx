@@ -16,11 +16,15 @@ const BottomNavbar = () => {
   const path = usePathname()
 
   return (
-    <nav className="bg-neutral-100 h-[55px] nav fixed bottom-0 left-0 w-full z-50 text-black py-8">
-      <div className="flex items-center justify-center gap-20 h-full w-full">
+    <nav className="bg-zinc-200 dark:bg-zinc-800 h-[55px] fixed bottom-0 left-0 w-full z-50 text-black py-8 shadow-[0px_1px_3px_3px_rgb(165,165,165)] dark:shadow-[0px_0px_10px_5px_rgb(1,1,1)]">
+      <div className="flex items-center justify-center gap-20 h-full w-full ">
         <Link className="relative" href={'cart'}>
           <NotebookPen
-            className={path === '/cart' ? 'text-gray-800' : 'text-gray-400'}
+            className={
+              path === '/cart'
+                ? 'text-zinc-800 dark:text-zinc-200'
+                : 'text-zinc-400 dark:text-zinc-700'
+            }
             size={28}
           />
           <span className="absolute -top-3 -right-3 z-10 bg-red-500 rounded-full w-6 h-6 flex justify-center items-center text-secondary">
@@ -29,7 +33,11 @@ const BottomNavbar = () => {
         </Link>
 
         <Link
-          className={path === '/products' ? 'text-gray-800' : 'text-gray-400'}
+          className={
+            path === '/products'
+              ? 'text-zinc-800 dark:text-zinc-200'
+              : 'text-gray-400 dark:text-zinc-700'
+          }
           href={'/products'}
         >
           <Home size={28} />
