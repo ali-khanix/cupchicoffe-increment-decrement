@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useCart } from '@/context/CartContext'
 
 // Icons
-import { Home, NotebookPen, ShoppingCart } from 'lucide-react'
+import { Home, NotebookPen } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import { ThemeToggle } from './ThemeToggle'
 
@@ -28,7 +28,7 @@ const BottomNavbar = () => {
             size={28}
           />
           <span className="absolute -top-3 -right-3 z-10 bg-red-500 rounded-full w-6 h-6 flex justify-center items-center text-secondary">
-            {cart.length}
+            {cart.reduce((total, item) => total + item.quantity, 0)}
           </span>
         </Link>
 
