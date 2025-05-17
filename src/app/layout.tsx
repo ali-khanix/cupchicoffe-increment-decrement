@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 import { CartProvider } from '@/context/CartContext'
-import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
 
 import { iranSans } from '@/fonts/font'
+import Providers from '@/lib/providers'
 
 export const metadata: Metadata = {
   title: 'Coffee Shop',
@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${iranSans.variable} antialiased`}>
-        <ThemeProvider attribute={'class'} enableSystem defaultTheme="system">
+        <Providers>
           <CartProvider>
             <main>{children}</main>
           </CartProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   )
