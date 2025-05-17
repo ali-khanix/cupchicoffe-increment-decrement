@@ -40,7 +40,7 @@ export default function ProductsPage() {
 
   return (
     <PageTransitionWrapper>
-      <main className="mt-[180px] px-4 mb-20">
+      <main className="mt-[140px] px-4 mb-20">
         <ProductList categories={data} onAdd={addToCart} />
       </main>
     </PageTransitionWrapper>
