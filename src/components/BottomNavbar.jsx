@@ -16,7 +16,7 @@ const BottomNavbar = () => {
   const path = usePathname()
 
   return (
-    <nav className="bg-zinc-200 dark:bg-zinc-800 h-[55px] fixed bottom-0 left-0 w-full z-50 text-black py-8 shadow-[0px_1px_3px_3px_rgb(165,165,165)] dark:shadow-[0px_0px_10px_5px_rgb(1,1,1)]">
+    <nav className="bg-zinc-200 dark:bg-zinc-800 h-[55px] fixed bottom-0 left-0 w-full z-50 text-black py-8 shadow-[0px_1px_3px_3px_rgb(165,165,165)] dark:shadow-[0px_0px_10px_1px_rgb(1,1,1)]">
       <div className="flex items-center justify-center gap-20 h-full w-full ">
         <Link className="relative" href={'cart'}>
           <NotebookPen
