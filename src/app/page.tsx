@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import Intro from "@/components/Intro";
+import Intro from '@/components/Intro'
 
 export default function Home() {
-  return <Intro />;
+  return <Intro />
 }
