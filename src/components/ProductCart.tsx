@@ -20,6 +20,7 @@ import { useCart } from '@/context/CartContext'
 
 interface ProductCartProps {
   product: MenuItem
+  onAdd: () => void
 }
 
 const ProductCart = ({ product }: ProductCartProps) => {

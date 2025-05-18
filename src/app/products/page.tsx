@@ -13,6 +13,7 @@ import PageTransitionWrapper from '@/components/animations/PageTransitionWrapper
 // Data types
 
 import ProductList from './components/ProductList'
+import LoadingScreen from './components/LoadingScreen'
 
 export default function ProductsPage() {
   const { addToCart } = useCart()
@@ -23,7 +24,7 @@ export default function ProductsPage() {
     const timer = setTimeout(() => {
       setData(drinks)
       setLoading(false)
-    }, 1000)
+    }, 4000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -31,9 +32,7 @@ export default function ProductsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <span className="text-lg font-medium animate-pulse">
-          درحال بارگذاری اطلاعات...
-        </span>
+        <LoadingScreen />
       </div>
     )
   }
