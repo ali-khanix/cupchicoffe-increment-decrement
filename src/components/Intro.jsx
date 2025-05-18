@@ -10,12 +10,22 @@ const Intro = () => {
     <div className="relative min-h-dvh overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-[-1]">
-        <Image
+        {/* <Image
           fill
-          src="/bg.png"
+          // src="/bg.png"
+          src="/animations/hot_coffee_gif.webp"
           alt="قهوه اسپرسو"
           className="object-cover w-full h-full"
           priority
+        /> */}
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
+          src="/animations/coffee_beans_smoke.mp4"
         />
       </div>
 
