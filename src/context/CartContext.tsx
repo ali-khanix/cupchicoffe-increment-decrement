@@ -9,9 +9,9 @@ type CartItem = MenuItem & { quantity: number }
 type CartContextType = {
   cart: CartItem[]
   addToCart: (product: MenuItem) => void
-  removeFromCart: (id: string) => void
-  increment: (id: string) => void
-  decrement: (id: string) => void
+  removeFromCart: (id: number) => void
+  increment: (id: number) => void
+  decrement: (id: number) => void
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined)
@@ -39,11 +39,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
-  const removeFromCart = (id: string) => {
+  const removeFromCart = (id: number) => {
     setCart((prev) => prev.filter((item) => item.id !== id))
   }
 
-  const increment = (id: string) => {
+  const increment = (id: number) => {
     setCart((prev) =>
       prev.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     )
   }
 
-  const decrement = (id: string) => {
+  const decrement = (id: number) => {
     setCart((prev) =>
       prev
         .map((item) =>
