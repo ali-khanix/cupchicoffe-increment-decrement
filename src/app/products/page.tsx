@@ -24,7 +24,7 @@ export default function ProductsPage() {
     const timer = setTimeout(() => {
       setData(drinks)
       setLoading(false)
-    }, 4000)
+    }, 1000)
 
     return () => clearTimeout(timer)
   }, [])

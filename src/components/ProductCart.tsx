@@ -95,8 +95,8 @@ const ProductCart = ({ product }: ProductCartProps) => {
 
       <DialogContent className="text-right border-primary dark:border-secondary">
         <DialogHeader>
-          <DialogClose>
-            <X />
+          <DialogClose className="">
+            <X className="mb-2 " />
           </DialogClose>
           <Image
             width={200}
@@ -128,8 +128,9 @@ const ProductCart = ({ product }: ProductCartProps) => {
             <div className="flex items-center gap-3">
               <Button
                 onClick={() => decrement(product.id)}
-                variant="secondary"
+                variant="outline"
                 size="icon"
+                className="border-none text-zinc-800"
               >
                 <Minus size={20} />
               </Button>
@@ -138,8 +139,9 @@ const ProductCart = ({ product }: ProductCartProps) => {
               </span>
               <Button
                 onClick={() => increment(product.id)}
-                variant="secondary"
+                variant="outline"
                 size="icon"
+                className="border-1 border-zinc-400"
               >
                 <Plus size={20} />
               </Button>

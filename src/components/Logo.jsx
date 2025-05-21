@@ -14,6 +14,7 @@ const Logo = () => {
         height={180}
         src={`${theme === 'dark' ? '/logo-h-(cream).svg' : '/logo-h-(green).svg'}`}
         className="mx-auto py-4"
+        priority
       />
     </Link>
   )

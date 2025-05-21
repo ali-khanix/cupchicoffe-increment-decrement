@@ -1,6 +1,5 @@
 'use client'
 
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import { useEffect, useState } from 'react'
 
 export default function LoadingScreen() {
@@ -27,20 +26,6 @@ export default function LoadingScreen() {
   if (isDarkMode === null) return null // Avoid flicker on first load
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-black transition-colors">
-      {isDarkMode ? (
-        <DotLottieReact
-          src="https://lottie.host/1272d5d0-694f-40f8-a4a3-ea85074d0487/Bgqi7MFLhN.lottie"
-          loop
-          autoplay
-        />
-      ) : (
-        <DotLottieReact
-          src="https://lottie.host/18039ec0-b06c-41f0-9bb3-7150a3b4f155/hgEydVsRzB.lottie"
-          loop
-          autoplay
-        />
-      )}
-    </div>
+    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-black transition-colors"></div>
   )
 }
