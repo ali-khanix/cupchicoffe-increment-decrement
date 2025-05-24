@@ -153,7 +153,7 @@ export const drinks: ProductCategory[] = [
           '30/70 - بیست میلی گرم پودر قهوه اسپرسو تازه - 120 میلی گرم کافئین - 60 میلی لیتر',
         price: 55000,
         image:
-          'https://d1w7312wesee68.cloudfront.net/9-Eb-xSzREmwv_KV-tsNxV4aTZo3fcsFBhkdys0kzcw/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/a1d56734-b38f-4cd5-ad68-76b845a69f3b/MenuItem/d255b9c8-e7b0-40dc-9b6b-be04ca4f96bc.jpg',
+          'https://mangia.nyc/wp-content/uploads/2022/12/01-Double-Espresso.jpg',
       },
       {
         id: 18,
@@ -162,7 +162,7 @@ export const drinks: ProductCategory[] = [
           '30/70 - نه میلی گرم پودر قهوه اسپرسو تازه - 120 میلی گرم کافئین - 60 میلی لیتر',
         price: 50000,
         image:
-          'https://richiamocoffee.com/wp-content/uploads/2023/04/1.-Espresso-600x600.jpg',
+          'https://craftcoffeespot.com/wp-content/uploads/2022/05/Lungo.png',
       },
       {
         id: 19,

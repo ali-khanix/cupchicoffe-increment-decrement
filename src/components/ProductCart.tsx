@@ -35,6 +35,7 @@ const ProductCart = ({ product }: ProductCartProps) => {
           <div className="cursor-pointer">
             <div className="relative overflow-hidden rounded-2xl w-full h-32">
               <Image
+                priority
                 fill
                 className="object-cover"
                 src={product.image}

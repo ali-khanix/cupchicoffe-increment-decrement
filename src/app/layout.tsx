@@ -8,8 +8,8 @@ import { iranSans } from '@/fonts/font'
 import Providers from '@/lib/providers'
 
 export const metadata: Metadata = {
-  title: 'Coffee Shop',
-  description: 'Order your favorite drinks',
+  title: 'CupChiCoffee',
+  description: 'نوشیدنی مورد علاقتون رو سفارش بدید',
 }
 
 export default function RootLayout({

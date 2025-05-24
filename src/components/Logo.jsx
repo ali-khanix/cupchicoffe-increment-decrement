@@ -8,14 +8,15 @@ const Logo = () => {
   const { theme, setTheme } = useTheme()
   return (
     <Link href={'/'}>
-      <Image
-        alt="لوگو کافه کاپ چی"
-        width={180}
-        height={180}
-        src={`${theme === 'dark' ? '/logo-h-(cream).svg' : '/logo-h-(green).svg'}`}
-        className="mx-auto py-4"
-        priority
-      />
+      <div className="relative h-auto w-[180px] mx-auto py-6">
+        <Image
+          alt="لوگو کافه کاپ چی"
+          src={`${theme === 'dark' ? '/logo-h-(cream).svg' : '/logo-h-(green).svg'}`}
+          className=" object-contain"
+          priority
+          fill
+        />
+      </div>
     </Link>
   )
 }
